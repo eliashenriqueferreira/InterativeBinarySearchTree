@@ -171,6 +171,11 @@ void actInOrder(Tree *nod, void action(Tree *))
 		{
 			aux = nod->root;
 
+			if (aux->root == NULL)
+			{
+				return;        // Only ROOT has no root
+			}
+			
 			if (aux->left == nod)      // Returns to root from left
 			{
 				action(aux);
@@ -180,10 +185,6 @@ void actInOrder(Tree *nod, void action(Tree *))
 					goto maxOnLeft;
 				}
 
-				if (aux->root == NULL)
-				{
-					return;        // Only ROOT has no root
-				}
 			}
 			nod = aux;
 		}
