@@ -19,7 +19,7 @@ typedef struct node {
 Tree * addIt(Tree* nod, unsigned long long number);
 Tree * findIt(Tree * nod, unsigned long long val);
 
-#define MAX_RECURSIVE	25
+#define MAX_RECURSIVE	20
 
 // Rebalance TREE
 // R E		<== Not 
@@ -62,7 +62,6 @@ void rebalance_right(Tree *rot_nod, Tree *end_nod)
 	if (aux % 2 != 0)
 	{
 		aux++;
-		endRight++;
 	}
 	aux /= 2;
 	
